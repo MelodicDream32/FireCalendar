@@ -1,7 +1,7 @@
 <main>
-  <div class="header">
+  <div class="header" [ngStyle]="{'padding-top': auth.stateFlag === true ? '5vh' : '35vh'}">
     <h2> {{title}} </h2>
-    <p> Firebase, Angular and Google Calendar Test App </p>
+    <p> Firebase Auth, Angular and Google Calendar API Test App </p>
   </div>
 
   <section class="user-info">

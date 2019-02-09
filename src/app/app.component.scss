@@ -2,9 +2,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-bottom: 35px;
     h2 {
         text-align: center;
         width: 100%;
+        font-weight: 300;
+        font-size: 50px;
     }
 }
 
@@ -16,7 +19,7 @@ hr {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 10px 0 35px;
+    margin: 10px 0 30px;
 
     
     .login-btn__row {
@@ -65,7 +68,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 0 67px;
+    // padding: 0 0 67px;
 
 }
 .calendar-items__card {

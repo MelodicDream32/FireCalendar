@@ -13,6 +13,7 @@ export class AuthService {
 
   user$ : Observable<firebase.User>;
   calendarItems: any[];
+  stateFlag: boolean;
 
   constructor(public fcAuth: AngularFireAuth) {
     this.initClient();
@@ -43,10 +44,21 @@ export class AuthService {
 
       const credential = auth.GoogleAuthProvider.credential(token);
       await this.fcAuth.auth.signInAndRetrieveDataWithCredential(credential);
+      this.toggleFlagTrue();
     }
 
     logout() {
       this.fcAuth.auth.signOut();
+      this.toggleFlagFalse()
+    }
+// The toggles are used to for checking if someone logged in through the buttons. 
+    toggleFlagFalse() {
+      this.stateFlag = false;
+      console.log('User Logged state is False')
+    }
+    toggleFlagTrue() {
+      this.stateFlag = true;
+      console.log('User Logged state is True')
     }
 
     async getCalendar() {
